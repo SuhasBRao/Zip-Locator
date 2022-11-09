@@ -6,52 +6,48 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ResultData {
     
-    @JsonProperty("post code")
-    private String postCode;
+    @JsonProperty("Message")
+    private String message;
 
-    @JsonProperty("country")
-    private String country;
+    @JsonProperty("Status")
+    private String status;
 
-    // @JsonProperty("country abbreviation")
-    // private String countryAbbr;
-
-    @JsonProperty("places")
+    @JsonProperty("PostOffice")
     private Places[] place;
 
     public ResultData(){
     }
 
-    public String getPostCode(){
-        return postCode;
+    public String getMessage() {
+        return message;
     }
 
-    public void setPostCode(String postCode){
-        this.postCode = postCode;
+    public String getStatus() {
+        return status;
     }
 
-    public String getCountry(){
-        return country;
-    }
-
-    public void setCountry(String country){
-        this.country = country;
-    }
-
-    public Places[] getPlace(){
+    public Places[] getPlace() {
         return place;
     }
-
-    public void setPlace(Places[] place){
-        this.place = place;
+    
+    public void setMessage(String message) {
+        this.message = message;
     }
 
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public void setPlace(Places[] place) {
+        this.place = place;
+    }
 
     @Override
     public String toString() {
       return "ZipData{" +
-          "postCode=" + postCode +
-          ", country=" + country +
-          ", place= '" + place[0].toString()+ '\'' +
+          "Message=" + message +
+          ", status=" + status +
+          ", PostOffice= '" + place[0].toString()+ '\'' +
           '}';
     }
     

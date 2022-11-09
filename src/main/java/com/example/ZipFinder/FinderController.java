@@ -17,26 +17,30 @@ public class FinderController {
 
     @GetMapping("/addZip")
     public String addZip(Model model){
-        model.addAttribute("addZip", new ZipCode());
+        model.addAttribute("zipInput", new ZipCodeInput());
         return "addZip";
     }
 
+    // Below bean helps us to make http request to API
     @Bean
 	public RestTemplate restTemplate(RestTemplateBuilder builder) {
 		return builder.build();
 	}
 
     @PostMapping("/addZip")
-    public String showResult(@ModelAttribute ZipCode zipcode, Model model, RestTemplate restTemplate){
+    public String showResult(@ModelAttribute ZipCodeInput zipcode, Model model, RestTemplate restTemplate){
         
-        model.addAttribute("addZip", zipcode);
+        model.addAttribute("zipInput", zipcode);
         apiURL = zipcode.getLink();
 
         System.out.println(apiURL);
         
-        ResultData resultdata = restTemplate.getForObject(
-					apiURL, ResultData.class);
-        model.addAttribute("ZipData", resultdata);
+        // The info retrived from api call is list of Json array. So we are storing it as a resultdataArray
+        ResultData  resultdata[] = restTemplate.getForObject(apiURL, ResultData[].class);
+        System.out.println(resultdata[0]);
+
+        // save it as a model object with name ZipData this is used in html to show the output
+        model.addAttribute("ZipData", resultdata[0]);
 
         return "showResult";
     }

@@ -6,30 +6,71 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Places {
 
-    @JsonProperty("place name")
+    @JsonProperty("Name")
     private String placeName;
 
-    @JsonProperty("longitude")
-    private String longitude;
+    @JsonProperty("BranchType")
+    private String branchType;
 
-    @JsonProperty("latitude")
-    private String latitude;
+    @JsonProperty("Circle")
+    private String circle;
 
-    @JsonProperty("state")
+    @JsonProperty("Division")
+    private String division;
+
+    @JsonProperty("Region")
+    private String region;
+
+    @JsonProperty("State")
     private String state;
 
-    @JsonProperty("state abbreviation")
-    private String stateAbbr;
+    @JsonProperty("District")
+    private String district;
+
+    @JsonProperty("Country")
+    private String country;
 
     public Places(){
     }
 
-    public String getPlaceName(){
+    
+    public String getPlaceName() {
         return placeName;
     }
 
-    public String getState(){
+
+    public String getBranchType() {
+        return branchType;
+    }
+
+
+    public String getCircle() {
+        return circle;
+    }
+
+
+    public String getDivision() {
+        return division;
+    }
+
+
+    public String getRegion() {
+        return region;
+    }
+
+
+    public String getState() {
         return state;
+    }
+
+
+    public String getDistrict() {
+        return district;
+    }
+
+
+    public String getCountry() {
+        return country;
     }
 
     public void setPlaceName(String placeName){
@@ -44,9 +85,13 @@ public class Places {
     public String toString() {
         return "Places{" +
             "place name=" + placeName +
-            ", longitude='" + longitude +
-            ", latitude='" + latitude +
-            "state= "+ state + '\'' +
+            ", branch Type='" + branchType +
+            ", circle='" + circle +
+            ", District=" + district +
+            ", Division=" + division +
+            ", Region=" + region +
+            "state= "+ state + 
+            ",Country= "+ country + '\'' +
             '}';
     }
 }
