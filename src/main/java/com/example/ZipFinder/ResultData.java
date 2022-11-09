@@ -1,12 +1,10 @@
 package com.example.ZipFinder;
 
-import java.util.Arrays;
-
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ZipData {
+public class ResultData {
     
     @JsonProperty("post code")
     private String postCode;
@@ -20,7 +18,7 @@ public class ZipData {
     @JsonProperty("places")
     private Places[] place;
 
-    public ZipData(){
+    public ResultData(){
     }
 
     public String getPostCode(){
