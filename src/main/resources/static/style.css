@@ -1,5 +1,6 @@
 body {
-    background-color: rgba(52, 65, 91, 0.393);
+    background: rgb(70,100,254);
+    background: linear-gradient(90deg, rgba(70,100,254,1) 0%, rgba(249,86,119,1) 100%);
   }
   
   h1 {
@@ -21,46 +22,33 @@ body {
     color: rgb(239, 239, 124);
   }
 
-.form-submit-button {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    margin: 10px 4px;
-    cursor: pointer;
-    border-radius: 20px;
-    }
-
-.form-submit-button:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.form-reset-button {
-    background-color: #04AA6D;
-    border: none;
-    color: white;
-    padding: 12px 20px;
-    text-decoration: none;
-    margin: 10px 1px;
-    cursor: pointer;
-    border-radius: 20px;   
-}
-.form-reset-button:hover{
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-}
-
-.button {
-    background-color: #4CAF50; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 20px;
+.button{
+  font-family: Roboto, sans-serif;
+  font-weight: 0;
+  font-size: 14px;
+  color: #0066cc;
+  background-color: rgb(196, 194, 194);
+  padding: 10px 30px;
+  border: 2px solid #0066cc;
+  box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+  border-radius: 50px;
+  transition : 1000ms;
+  transform: translateY(0);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 6px;
   }
-.button:hover {
-    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  
+.button:hover{
+  
+  transition : 1000ms;
+  padding: 10px 50px;
+  transform : translateY(-0px);
+  background-color: #fff;
+  color: #0066cc;
+  border: solid 2px #0066cc;
   }
+  
