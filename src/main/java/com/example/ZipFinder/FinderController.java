@@ -39,6 +39,10 @@ public class FinderController {
         ResultData  resultdata[] = restTemplate.getForObject(apiURL, ResultData[].class);
         System.out.println(resultdata[0]);
 
+        if(resultdata[0].getStatus() == "Error"){
+            return "error";
+        }
+    
         // save it as a model object with name ZipData this is used in html to show the output
         model.addAttribute("ZipData", resultdata[0]);
 

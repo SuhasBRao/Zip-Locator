@@ -2,12 +2,13 @@
 <html xmlns:th="https://www.thymeleaf.org">
 <head> 
     <title>Location</title>
+    <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 </head>
 <body>
-	<h4>Location Corresponding to Zip Code </h4>
+	<h3 align="center">Location Corresponding to Zip Code </h3>
     <div name="result" align="center">
-        <p th:text="'Post Office Name: ' + ${ZipData.place[0].placeName}"  />
+        <p th:text="'Post Office Name: ' + ${ZipData.place[0].placeName}">Hello</p>
         <p th:text="'Branch Type: ' + ${ZipData.place[0].branchType}" />
         <p th:text="'Circle: ' + ${ZipData.place[0].circle}" />
         <p th:text="'District: ' + ${ZipData.place[0].district}" />
@@ -16,7 +17,7 @@
         <p th:text="'State: ' + ${ZipData.place[0].state}" />
     </div>
     
-
-    <a href="/addZip">Submit another Zip Code</a>
+    <a href="/addZip"><button class="button">Back</button></a>
+    
 </body>
 </html>
