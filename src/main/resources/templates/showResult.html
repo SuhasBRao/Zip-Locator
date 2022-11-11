@@ -4,10 +4,11 @@
     <title>Location</title>
     <link rel="stylesheet" href="style.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	<h3 align="center">Location Corresponding to Zip Code </h3>
-    <div name="result" align="center">
+    <div name="result" align="center" class="data">
         <p th:text="'Post Office Name: ' + ${ZipData.place[0].placeName}">Hello</p>
         <p th:text="'Branch Type: ' + ${ZipData.place[0].branchType}" />
         <p th:text="'Circle: ' + ${ZipData.place[0].circle}" />
@@ -17,7 +18,7 @@
         <p th:text="'State: ' + ${ZipData.place[0].state}" />
     </div>
     
-    <a href="/addZip"><button class="button">Back</button></a>
+    <a href="/"><button class="button">Back</button></a>
     
 </body>
 </html>

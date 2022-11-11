@@ -4,13 +4,14 @@
     <link rel="stylesheet" href="style.css">
     <title>Add ZIP code</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 
-<h1  align="center">Zip-Locator</h1>
+<h1  align="center"><b>Zip-Locator</b></h1>
 <h3 align="center">Zip-Locator allows you to fetch details about any <i>city or District</i> based on just a zipCode input.</h3>
 <h3 align="center">Enter a Zip code to see it work</h3>
-<form action="#" th:action="@{/addZip}" th:object="${zipInput}" method="post" align="center">
+<form action="#" th:action="@{/}" th:object="${zipInput}" method="post" align="center">
     <p>
         ZIP code: <input type="text" th:field="*{code}">
     </p>

@@ -1,10 +1,10 @@
 body {
-    background: rgb(70,100,254);
-    background: linear-gradient(90deg, rgba(70,100,254,1) 0%, rgba(249,86,119,1) 100%);
+    background: #f9f9f9;
+    background: linear-gradient(90deg, #ffffff 0%,  #f4e496 100%);
   }
   
   h1 {
-    color: rgb(239, 239, 124);
+    color: rgb(74, 48, 126);
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
   }
@@ -12,22 +12,23 @@ body {
   p {
     font-family: verdana;
     font-size: 20px;
-    color: rgb(13, 13, 13);
+    color: #201f20;
     
   }
 
   h3{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: medium;
-    color: rgb(239, 239, 124);
+    color: rgb(74, 48, 126);
+    font-size: 22px;
   }
 
 .button{
   font-family: Roboto, sans-serif;
   font-weight: 0;
   font-size: 14px;
-  color: #0066cc;
-  background-color: rgb(196, 194, 194);
+  color: #fceed1;
+  background-color: #8065b7;
   padding: 10px 30px;
   border: 2px solid #0066cc;
   box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
@@ -47,8 +48,8 @@ body {
   transition : 1000ms;
   padding: 10px 50px;
   transform : translateY(-0px);
-  background-color: #fff;
-  color: #0066cc;
+  background-color: #8065b7;
+  color: #fceed1;
   border: solid 2px #0066cc;
   }
   

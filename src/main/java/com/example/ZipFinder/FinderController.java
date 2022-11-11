@@ -15,7 +15,7 @@ public class FinderController {
 
     private String apiURL;
 
-    @GetMapping("/addZip")
+    @GetMapping("/")
     public String addZip(Model model){
         model.addAttribute("zipInput", new ZipCodeInput());
         return "addZip";
@@ -27,7 +27,7 @@ public class FinderController {
 		return builder.build();
 	}
 
-    @PostMapping("/addZip")
+    @PostMapping("/")
     public String showResult(@ModelAttribute ZipCodeInput zipcode, Model model, RestTemplate restTemplate){
         
         model.addAttribute("zipInput", zipcode);

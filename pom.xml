@@ -14,7 +14,7 @@
 	<name>ZipFinder</name>
 	<description>A mini project using Spring which allows the user to find details corresponding to a zip code</description>
 	<properties>
-		<java.version>19</java.version>
+		<java.version>17</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
